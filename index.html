@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fortune Teller</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+  <button class="music-toggle" id="musicToggle" aria-label="Toggle background music">🔈</button>
+  <audio id="bgMusic" src="{{ url_for('static', filename='studio_ghibli.mp3') }}" loop></audio>
+
+  <div class="blob blob-a"></div>
+  <div class="blob blob-b"></div>
+  <div class="blob blob-c"></div>
+
+  <main class="card">
+    <div class="mascot" id="mascot">🐸</div>
+    <h1>Welcome to your future!</h1>
+    <!--<p class="subtitle">Do you want to see your fortune?</p>-->
+    <p class="subtitle">Press the Crystal To Get Your Prophecy</p>
+
+    <!--<form id="runForm" autocomplete="off">
+      <input
+        type="text"
+        id="userInput"
+        placeholder="Type here…"
+        required
+      >-->
+    <button type = "button" id="runBtn">
+      <!--<span class="btn-label">Go</span>-->
+      <span class="btn-icon">🔮</span>
+    </button>
+    
+
+    <div class="bubble" id="outputBubble" hidden>
+      <p id="outputText"></p>
+    </div>
+  </main>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
