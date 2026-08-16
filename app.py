@@ -4,14 +4,6 @@ import random
 app = Flask(__name__)
 
 
-# --------------------------------------------------------------
-# 👉 THIS is where your existing command-line program's logic goes.
-# Take whatever you currently do with input()/print() and turn it
-# into a plain function that takes arguments and RETURNS a result
-# instead of printing it.
-#
-# Example placeholder below — replace with your real logic.
-# --------------------------------------------------------------
 def run_my_program():#user_text: str) -> str:
     
     #if not user_text.strip():
